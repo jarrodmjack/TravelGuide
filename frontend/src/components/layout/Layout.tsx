@@ -12,9 +12,9 @@ const Layout: React.FC<LayoutOwnProps> = ({ children }) => {
 			<nav className="w-full md:px-60 bg-tangerine py-6">
 				<div className="flex flex-wrap justify-between items-center max-w-screen-xl p-4">
 					<Link href="/search">
-					<span className="self-center text-2xl font-semibold whitespace-nowrap">
-						TravelGuide
-					</span>
+						<span className="self-center text-2xl font-semibold whitespace-nowrap">
+							TravelGuide
+						</span>
 					</Link>
 					<button
 						data-collapse-toggle="mega-menu-full"
@@ -33,9 +33,9 @@ const Layout: React.FC<LayoutOwnProps> = ({ children }) => {
 						>
 							<path
 								stroke="currentColor"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
 								d="M1 1h15M1 7h15M1 13h15"
 							/>
 						</svg>
@@ -79,9 +79,7 @@ const Layout: React.FC<LayoutOwnProps> = ({ children }) => {
 					</div>
 				</div>
 			</nav>
-			<div className="border-blush md:px-60 bg-lightOrange min-h-screen">
-				{children}
-			</div>
+			<div className="bg-lightOrange">{children}</div>
 		</main>
 	)
 }

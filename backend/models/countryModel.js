@@ -15,6 +15,10 @@ const countrySchema = new Schema({
     travelAdvisories: {
         type: [String],
         required: true
+    },
+    imageUrl: {
+        type: String,
+        required: false
     }
 }, { timestamps: true })
 
