@@ -12,7 +12,7 @@ const LoginButton = () => {
 		<button
         onClick={handleRedirectToLogin}
 			type="button"
-			className="bg-charcoal py-2 px-4 rounded-lg text-white hover:text-blush hover:bg-black transition ease-in"
+			className="py-2 px-4 rounded-lg text-white transition ease-in bg-blush hover:bg-blushDark"
 		>
 			Log in
 		</button>

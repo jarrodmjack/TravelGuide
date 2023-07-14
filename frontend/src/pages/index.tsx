@@ -19,8 +19,8 @@ const index = () => {
 		<Layout>
 			<section className="text-white">
 				<div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
-					<div className="bg-gray-50 border-2 border-charcoal rounded-lg p-8 md:p-12 mb-8 bg-blush">
-						<h1 className="text-gray-900text-3xl md:text-5xl font-extrabold mb-2">
+					<div className="bg-gray-50 border-2 border-charcoal rounded-lg p-8 md:p-12 mb-8 bg-lightCoal">
+						<h1 className="text-3xl md:text-5xl font-extrabold mb-2">
 							TravelGuide Country Directory
 						</h1>
 						<p className="text-lg font-normal text-gray-500 mb-6">
@@ -32,13 +32,13 @@ const index = () => {
 						</p>
 						<a
 							href="/login"
-							className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-charcoal hover:bg-black transition ease-in hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+							className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-blush hover:bg-blushDark transition ease-in focus:ring-4 focus:ring-blue-300 "
 						>
 							Try it now
 						</a>
 					</div>
 					<div className="grid md:grid-cols-2 gap-8">
-						<div className="bg-gray-50 border-2 border-charcoal rounded-lg p-8 md:p-12 bg-blush flex flex-col justify-evenly">
+						<div className="bg-gray-50 border-2 border-charcoal rounded-lg p-8 md:p-12 bg-lightCoal flex flex-col justify-evenly">
 							<a
 								href="/login"
 								className="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md mb-2"
@@ -62,7 +62,7 @@ const index = () => {
 								<a
 									href="https://www.travel-advisory.info/data-api"
 									target="_blank"
-									className="text-charcoal underline font-bold cursor-pointer"
+									className="underline font-bold cursor-pointer hover:text-blush"
 								>
 									https://www.travel-advisory.info/data-api
 								</a>
@@ -70,13 +70,13 @@ const index = () => {
 								<a
 									href="https://restcountries.com/"
 									target="_blank"
-									className="text-charcoal underline font-bold cursor-pointer"
+									className="underline font-bold cursor-pointer hover:text-blush"
 								>
 									https://restcountries.com/
 								</a>
 							</p>
 						</div>
-						<div className="bg-gray-50 border-2 border-charcoal rounded-lg p-8 md:p-12 bg-blush flex flex-col justify-evenly">
+						<div className="bg-gray-50 border-2 border-charcoal rounded-lg p-8 md:p-12 bg-lightCoal flex flex-col justify-evenly">
 							<a
 								target="_blank"
 								href="https://github.com/jarrodmjack"
@@ -109,7 +109,7 @@ const index = () => {
 							</p>
 							<a
 								href="https://github.com/jarrodmjack/TravelGuide"
-								className="text-blue-600 dark:text-blue-500 hover:underline font-medium text-lg inline-flex items-center"
+								className="text-blue-600 dark:text-blue-500 hover:underline font-medium text-lg inline-flex items-center hover:text-blush"
 							>
 								Github repo
 								<svg

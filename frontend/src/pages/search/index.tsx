@@ -15,10 +15,13 @@ const SearchPage = () => {
 			return
 		} else {
 			try {
-				const res = await axios.post("http://localhost:4001/api/search", {
-					prompt,
-				})
-                console.log('res: ', res)
+				const res = await axios.post(
+					"http://localhost:4001/api/search",
+					{
+						prompt,
+					}
+				)
+				console.log("res: ", res)
 			} catch (err) {
 				console.log(err)
 			}
@@ -28,7 +31,7 @@ const SearchPage = () => {
 	return (
 		<Layout>
 			<div className="flex justify-center">
-				<div className="min-h-[500px] w-[300px] sm:min-h-[500px] sm:w-[450px] md:min-h-[800px] md:w-[800px] bg-tangerine border border-charcoal shadow-xl rounded-lg">
+				<div className="min-h-[500px] w-[300px] sm:min-h-[500px] sm:w-[450px] md:min-h-[800px] md:w-[800px] bg-lightCoal border border-charcoal shadow-xl rounded-lg">
 					<SearchForm handleSubmit={handleSubmit} />
 				</div>
 			</div>

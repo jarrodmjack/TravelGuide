@@ -11,11 +11,11 @@ const Layout: React.FC<LayoutOwnProps> = ({ children }) => {
 	const { user } = useAuthContext()
 
 	return (
-		<main className="text-charcoal">
-			<nav className="w-full bg-tangerine py-6 px-80">
+		<main className="text-white">
+			<nav className="w-full bg-lightCoal py-6 px-80">
 				<div className="flex flex-wrap justify-between items-center max-w-screen-xl p-4">
 					<Link href="/search">
-						<span className="self-center text-2xl font-semibold whitespace-nowrap">
+						<span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
 							TravelGuide
 						</span>
 					</Link>
