@@ -1,6 +1,9 @@
 import { useAuthContext } from "@/hooks/useAuthContext"
 import Link from "next/link"
 import React, { PropsWithChildren } from "react"
+import LogoutButton from "../button/LogoutButton"
+import LoginButton from "../button/LoginButton"
+import SignupButton from "../button/SignupButton"
 
 type LayoutOwnProps = {} & PropsWithChildren
 
@@ -9,7 +12,7 @@ const Layout: React.FC<LayoutOwnProps> = ({ children }) => {
 
 	return (
 		<main className="text-charcoal">
-			<nav className="w-full md:px-60 bg-tangerine py-6">
+			<nav className="w-full bg-tangerine py-6 px-80">
 				<div className="flex flex-wrap justify-between items-center max-w-screen-xl p-4">
 					<Link href="/search">
 						<span className="self-center text-2xl font-semibold whitespace-nowrap">
@@ -41,38 +44,39 @@ const Layout: React.FC<LayoutOwnProps> = ({ children }) => {
 						</svg>
 					</button>
 					<div>
-						<ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0">
+						<ul className="flex items-center gap-4">
+							{user ? (
+								<>
+									<li className="hover:underline hover:text-blush font-semibold">
+										<a
+											href="/countries"
+											className="block text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+											aria-current="page"
+										>
+											Home
+										</a>
+									</li>
+									<li className="hover:underline hover:text-blush font-semibold">
+										<LogoutButton />
+									</li>
+								</>
+							) : (
+								<>
+									<li className="hover:underline hover:text-blush font-semibold">
+										<LoginButton />
+									</li>
+									<li className="hover:underline hover:text-blush font-semibold">
+										<SignupButton />
+									</li>
+								</>
+							)}
 							<li className="hover:underline hover:text-blush font-semibold">
 								<a
-									href="#"
-									className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-									aria-current="page"
-								>
-									Home
-								</a>
-							</li>
-							<li className="hover:underline hover:text-blush font-semibold">
-								<a
-									href="#"
+									target="_blank"
+									href="https://github.com/jarrodmjack/TravelGuide"
 									className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
 								>
-									Marketplace
-								</a>
-							</li>
-							<li className="hover:underline hover:text-blush font-semibold">
-								<a
-									href="#"
-									className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-								>
-									Resources
-								</a>
-							</li>
-							<li className="hover:underline hover:text-blush font-semibold">
-								<a
-									href="#"
-									className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-								>
-									Contact
+									Resource
 								</a>
 							</li>
 						</ul>

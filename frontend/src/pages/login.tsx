@@ -96,7 +96,7 @@ const login = () => {
 									className="font-medium text-gray-200 hover:underline"
 									href="/signup"
 								>
-									Sign up
+									Log in
 								</Link>
 							</p>
 						</form>
